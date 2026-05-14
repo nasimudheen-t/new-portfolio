@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-cream-bg: #09090b;
+  --color-cream-alt: #18181b;
+  --color-text-deep: #ffffff;
+  --color-text-muted: #a1a1aa;
+  --color-accent-gold: #ef4444;
+  --color-border-soft: #27272a;
+}
+
+@layer base {
+  body {
+    @apply bg-cream-bg text-text-deep antialiased selection:bg-accent-gold/20 selection:text-accent-gold;
+  }
+}
