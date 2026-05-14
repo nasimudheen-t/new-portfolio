@@ -104,7 +104,7 @@ export default function Services() {
         >
           <div className="flex justify-center items-center gap-4 mb-6">
             <span className="h-[1px] w-12 bg-accent-gold"></span>
-            <span className="text-accent-gold uppercase tracking-widest text-sm font-bold">FREELANCE PORTFOLIO</span>
+            <span className="text-accent-gold uppercase tracking-widest text-sm font-bold">From Idea to Production.</span>
             <span className="h-[1px] w-12 bg-accent-gold"></span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-text-deep tracking-tight mb-6">

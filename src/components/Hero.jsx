@@ -100,7 +100,8 @@ export default function Hero() {
                   y: -3,
                 }}
                 whileTap={{ scale: 0.97 }}
-                href="#projects"
+                href="/cv/Nasimudheen_T.pdf"
+                download="Nasimudheen_T.pdf"
                 className="
                   px-8 py-4
                   bg-black
@@ -112,12 +113,11 @@ export default function Hero() {
                   transition-all
                   duration-300
                   flex items-center gap-2
-                "
+                                           "
               >
-                View Portfolio
+                View CV
                 <ArrowRight size={17} />
               </motion.a>
-
               <motion.a
                 whileHover={{
                   scale: 1.05,
@@ -147,19 +147,19 @@ export default function Hero() {
               {[
                 {
                   icon: Github,
-                  href: "https://github.com",
+                  href: "https://github.com/nasimudheen-t",
                 },
                 {
                   icon: Linkedin,
-                  href: "https://linkedin.com",
+                  href: "https://www.linkedin.com/in/nasimudheen-t/",
                 },
                 {
                   icon: Instagram,
-                  href: "https://instagram.com",
+                  href: "https://www.instagram.com/nasym_._/",
                 },
                 {
                   icon: Mail,
-                  href: "mailto:nasimudheent22@gmail.com",
+  href: "https://mail.google.com/mail/?view=cm&to=nasimudheent22@gmail.com",
                 },
               ].map((social, idx) => {
                 const Icon = social.icon;
@@ -255,29 +255,28 @@ export default function Hero() {
           </nav>
 
           {/* Image */}
-         <motion.div
-  initial={{
-    opacity: 0,
-    y: 40,
-  }}
-  animate={{
-    opacity: 1,
-    y: 0,
-  }}
-  transition={{
-    duration: 1,
-    delay: 0.2,
-  }}
-  className="flex-1 flex items-end justify-center relative"
->
-  <div className="relative flex items-end justify-center">
-    
-    {/* Glow */}
-    <div className="absolute w-[350px] h-[350px] bg-white/10 blur-[120px] rounded-full bottom-20" />
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 40,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.2,
+            }}
+            className="flex-1 flex items-end justify-center relative"
+          >
+            <div className="relative flex items-end justify-center">
+              {/* Glow */}
+              <div className="absolute w-[350px] h-[350px] bg-white/10 blur-[120px] rounded-full bottom-20" />
 
-    {/* Border Frame */}
-    <div
-      className="
+              {/* Border Frame */}
+              <div
+                className="
         absolute
         inset-0
         rounded-[30px]
@@ -287,21 +286,21 @@ export default function Hero() {
         backdrop-blur-[2px]
         scale-[1.02]
       "
-    />
+              />
 
-    {/* Image */}
-    <motion.img
-      animate={{
-        y: [0, -10, 0],
-      }}
-      transition={{
-        duration: 5,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
-      src="/images/Nasim.jpg"
-      alt="Nasimudheen"
-      className="
+              {/* Image */}
+              <motion.img
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                src="/images/Nasim.jpg"
+                alt="Nasimudheen"
+                className="
         relative z-10
         h-[65vh]
         sm:h-[75vh]
@@ -312,15 +311,15 @@ export default function Hero() {
         border border-white/10
         drop-shadow-[0_25px_40px_rgba(0,0,0,0.45)]
       "
-      style={{
-        maskImage:
-          "linear-gradient(to bottom, black 88%, transparent 100%)",
-        WebkitMaskImage:
-          "linear-gradient(to bottom, black 88%, transparent 100%)",
-      }}
-    />
-  </div>
-</motion.div>
+                style={{
+                  maskImage:
+                    "linear-gradient(to bottom, black 88%, transparent 100%)",
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, black 88%, transparent 100%)",
+                }}
+              />
+            </div>
+          </motion.div>
 
           {/* Scroll Indicator */}
           <motion.div

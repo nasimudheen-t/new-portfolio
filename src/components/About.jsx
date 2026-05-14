@@ -1,6 +1,7 @@
+import React, { memo } from "react";
 import { motion } from "framer-motion";
 
-export default function About() {
+const About = memo(() => {
   const stats = [
     { value: "10+", label: "Projects" },
     { value: "1+", label: "Years Exp" },
@@ -14,17 +15,19 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="grid md:grid-cols-[1fr_1.5fr] gap-16 items-start"
+          className="grid md:grid-cols-[1fr_1.5fr] gap-16 items-start transform-gpu will-change-transform"
         >
           {/* Left Side: Photo */}
           <div className="relative w-full max-w-sm mx-auto md:mx-0">
             <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-cream-alt border border-border-soft">
               <img 
-                src="/public/images/about.png" 
+                src="/public/images/freelance/about.png" 
                 alt="Working" 
-                className="w-full h-full object-cover "
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute -inset-4 border border-accent-gold/20 rounded-3xl -z-10"></div>
@@ -62,4 +65,6 @@ export default function About() {
       </div>
     </section>
   );
-}
+});
+
+export default About;

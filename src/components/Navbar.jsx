@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -12,15 +12,26 @@ const navLinks = [
   { name: "Contact", href: "#contact" },
 ];
 
-export default function Navbar() {
+const Navbar = memo(() => {
   const [active, setActive] = useState("Home");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    let timeoutId;
+    const handleScroll = () => {
+      if (timeoutId) return;
+      timeoutId = setTimeout(() => {
+        setIsScrolled(window.scrollY > 20);
+        timeoutId = null;
+      }, 50); // 50ms throttle
+    };
+    
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (timeoutId) clearTimeout(timeoutId);
+    };
   }, []);
 
   return (
@@ -43,7 +54,7 @@ export default function Navbar() {
             >
               {link.name}
               {active === link.name && (
-                <span className="absolute left-0 bottom-0 w-full h-[2px] bg-accent-gold"></span>
+                <span className="absolute left-0 bottom-0 w-full h-[2px] bg-accent-gold transform-gpu"></span>
               )}
             </a>
           ))}
@@ -77,4 +88,6 @@ export default function Navbar() {
       )}
     </header>
   );
-}
+});
+
+export default Navbar;
