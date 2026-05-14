@@ -24,7 +24,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-cream-bg/90 backdrop-blur-md border-b border-border-soft py-4" : "bg-transparent py-6"}`}>
+    <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "translate-y-0 bg-cream-bg/95 backdrop-blur-md border-b border-border-soft py-4 shadow-sm" : "-translate-y-full opacity-0"}`}>
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         <a href="#hero" className="text-2xl font-serif font-bold tracking-tight text-text-deep">
           NT<span className="text-accent-gold">.</span>

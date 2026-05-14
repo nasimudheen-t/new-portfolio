@@ -4,43 +4,79 @@ const skillCategories = [
   {
     title: "Frontend",
     skills: [
-      { name: "React", core: true },
-      { name: "Next.js", core: false },
-      { name: "Tailwind CSS", core: false },
-      { name: "HTML/CSS", core: false },
-      { name: "JavaScript", core: true }
+      { name: "React.js", core: true },
+      { name: "Next.js", core: true },
+      { name: "JavaScript (ES6+)", core: true },
+      { name: "HTML5", core: false },
+      { name: "CSS3", core: false },
+      { name: "Tailwind CSS", core: true },
+      { name: "Bootstrap", core: false }
     ]
   },
   {
     title: "Backend",
     skills: [
       { name: "Node.js", core: true },
-      { name: "Express", core: true },
-      { name: "RESTful APIs", core: false }
+      { name: "Express.js", core: true },
+      { name: "RESTful API Design", core: false },
+      { name: "JWT", core: false },
+      { name: "Session-based Auth", core: false }
     ]
   },
   {
     title: "Databases",
     skills: [
       { name: "MongoDB", core: true },
-      { name: "MySQL", core: false }
+      { name: "MySQL", core: false },
+      { name: "Database Schema Design", core: false },
+      { name: "Query Optimization", core: false }
     ]
   },
   {
-    title: "Auth & State",
+    title: "DevOps & Cloud",
     skills: [
-      { name: "JWT", core: false },
-      { name: "OAuth", core: false },
-      { name: "RBAC", core: false },
-      { name: "TanStack Query", core: false }
+      { name: "Git", core: true },
+      { name: "GitHub", core: false },
+      { name: "CI/CD (basic)", core: false },
+      { name: "AWS Fundamentals", core: false },
+      { name: "Vercel", core: false },
+      { name: "Netlify", core: false }
+    ]
+  },
+  {
+    title: "State & Data Fetching",
+    skills: [
+      { name: "TanStack Query", core: true },
+      { name: "Axios", core: false },
+      { name: "Fetch API", core: false },
+      { name: "Context API", core: false }
+    ]
+  },
+  {
+    title: "UI Libraries",
+    skills: [
+      { name: "shadcn/ui", core: true },
+      { name: "Radix UI", core: false },
+      { name: "Tailwind CSS", core: false }
     ]
   },
   {
     title: "Tools",
     skills: [
-      { name: "Git", core: false },
-      { name: "GitHub", core: false },
-      { name: "VS Code", core: false }
+      { name: "Postman", core: false },
+      { name: "Chrome DevTools", core: false },
+      { name: "VS Code", core: false },
+      { name: "Figma (basic)", core: false }
+    ]
+  },
+  {
+    title: "Methodology",
+    skills: [
+      { name: "Agile", core: false },
+      { name: "Scrum", core: false },
+      { name: "REST API design", core: false },
+      { name: "RBAC", core: false },
+      { name: "MVC architecture", core: false }
     ]
   }
 ];

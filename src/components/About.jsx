@@ -22,7 +22,7 @@ export default function About() {
           <div className="relative w-full max-w-sm mx-auto md:mx-0">
             <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-cream-alt border border-border-soft">
               <img 
-                src="/src/assets/images/about.png" 
+                src="/public/images/about.png" 
                 alt="Working" 
                 className="w-full h-full object-cover "
               />
