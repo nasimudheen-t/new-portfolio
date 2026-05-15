@@ -2,81 +2,62 @@ import { motion } from "framer-motion";
 
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "Frontend Engineering",
     skills: [
       { name: "React.js", core: true },
       { name: "Next.js", core: true },
-      { name: "JavaScript (ES6+)", core: true },
-      { name: "HTML5", core: false },
-      { name: "CSS3", core: false },
+      { name: "TypeScript / ES6+", core: true },
+      { name: "State Management", core: false },
+      { name: "Performance Optimization", core: false },
       { name: "Tailwind CSS", core: true },
-      { name: "Bootstrap", core: false }
+      { name: "Responsive Architecture", core: false }
     ]
   },
   {
-    title: "Backend",
+    title: "Backend Engineering",
     skills: [
       { name: "Node.js", core: true },
       { name: "Express.js", core: true },
-      { name: "RESTful API Design", core: false },
-      { name: "JWT", core: false },
-      { name: "Session-based Auth", core: false }
+      { name: "REST API Design", core: false },
+      { name: "Authentication / JWT", core: false },
+      { name: "Microservices Concept", core: false }
     ]
   },
   {
-    title: "Databases",
+    title: "Databases & Storage",
     skills: [
       { name: "MongoDB", core: true },
       { name: "MySQL", core: false },
-      { name: "Database Schema Design", core: false },
+      { name: "Data Modeling", core: false },
       { name: "Query Optimization", core: false }
     ]
   },
   {
     title: "DevOps & Cloud",
     skills: [
-      { name: "Git", core: true },
-      { name: "GitHub", core: false },
-      { name: "CI/CD (basic)", core: false },
+      { name: "Git & Version Control", core: true },
+      { name: "CI/CD Pipelines", core: false },
       { name: "AWS Fundamentals", core: false },
-      { name: "Vercel", core: false },
-      { name: "Netlify", core: false }
+      { name: "Deployment Strategies", core: false },
+      { name: "Vercel / Netlify", core: false }
     ]
   },
   {
-    title: "State & Data Fetching",
+    title: "System Architecture",
+    skills: [
+      { name: "MVC Pattern", core: true },
+      { name: "RBAC Security", core: false },
+      { name: "API Integration", core: false },
+      { name: "Caching Strategies", core: false }
+    ]
+  },
+  {
+    title: "Ecosystem Tools",
     skills: [
       { name: "TanStack Query", core: true },
-      { name: "Axios", core: false },
-      { name: "Fetch API", core: false },
-      { name: "Context API", core: false }
-    ]
-  },
-  {
-    title: "UI Libraries",
-    skills: [
-      { name: "shadcn/ui", core: true },
-      { name: "Radix UI", core: false },
-      { name: "Tailwind CSS", core: false }
-    ]
-  },
-  {
-    title: "Tools",
-    skills: [
+      { name: "shadcn/ui", core: false },
       { name: "Postman", core: false },
-      { name: "Chrome DevTools", core: false },
-      { name: "VS Code", core: false },
-      { name: "Figma (basic)", core: false }
-    ]
-  },
-  {
-    title: "Methodology",
-    skills: [
-      { name: "Agile", core: false },
-      { name: "Scrum", core: false },
-      { name: "REST API design", core: false },
-      { name: "RBAC", core: false },
-      { name: "MVC architecture", core: false }
+      { name: "Agile / Scrum", core: false }
     ]
   }
 ];

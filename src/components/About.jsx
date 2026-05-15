@@ -41,13 +41,13 @@ const About = memo(() => {
             
             <div className="text-text-muted text-lg leading-relaxed mb-12 space-y-6">
               <p>
-                I am a passionate and detail-oriented MERN Stack Developer with a strong foundation in building dynamic and responsive web applications. I thrive on creating clean, efficient, and scalable code that solves real-world problems.
+                I am a Software Engineer focused on building robust, high-performance web applications using the MERN stack. My engineering approach prioritizes clean architecture, scalability, and solving complex business challenges with pragmatic technical solutions.
               </p>
               <p>
-                My expertise spans the entire development lifecycle, from conceptualizing modern user interfaces to architecting robust database schemas and APIs.
+                My expertise spans the entire product lifecycle—from designing resilient RESTful APIs and optimizing database schemas, to developing intuitive, state-driven frontends that deliver seamless user experiences.
               </p>
               <p>
-                When I'm not writing code, I enjoy exploring new technologies, refining my design sense, and studying the latest trends in web architecture to ensure I'm always delivering state-of-the-art solutions.
+                I am deeply committed to engineering excellence, continuously refining my knowledge of distributed systems, cloud deployments, and modern web architecture to build production-ready applications that drive measurable impact.
               </p>
             </div>
 

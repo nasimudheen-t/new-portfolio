@@ -81,15 +81,13 @@ export default function Hero() {
 
             {/* Role */}
             <h2 className="mt-5 text-xl sm:text-2xl text-[#222] font-medium">
-              Full Stack Developer /{" "}
-              <span className="text-red-500">MERN Developer</span>
+              Software Engineer /{" "}
+              <span className="text-red-500">Full Stack Architect</span>
             </h2>
 
             {/* Description */}
             <p className="mt-8 text-[#555] text-base sm:text-lg leading-relaxed max-w-xl font-light">
-              I build modern, scalable, responsive, and SEO-optimized web
-              applications with clean UI, powerful backend systems, and premium
-              user experiences.
+              Specializing in architecting scalable MERN-stack applications and enterprise-grade interfaces. I transform complex business requirements into performant, secure, and maintainable production systems.
             </p>
 
             {/* Buttons */}
