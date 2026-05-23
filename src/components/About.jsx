@@ -3,63 +3,203 @@ import { motion } from "framer-motion";
 
 const About = memo(() => {
   const stats = [
-    { value: "10+", label: "Projects" },
-    { value: "1+", label: "Years Exp" },
-    { value: "BCA", label: "Graduate" },
-    { value: "Open", label: "To Work" }
+    {
+      value: "10+",
+      label: "Projects Completed",
+    },
+    {
+      value: "1+",
+      label: "Years Experience",
+    },
+    {
+      value: "BCA",
+      label: "Graduate",
+    },
+    {
+      value: "Open",
+      label: "Available For Work",
+    },
   ];
 
   return (
-    <section id="about" className="py-32 border-t border-border-soft">
-      <div className="max-w-6xl mx-auto px-6">
+    <section
+      id="about"
+      className="relative py-32 overflow-hidden bg-black"
+    >
+      {/* Background Glow */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-[20%] left-[15%] w-[500px] h-[500px] bg-red-500/10 blur-[150px] rounded-full" />
+
+        <div className="absolute bottom-[10%] right-[15%] w-[500px] h-[500px] bg-red-500/10 blur-[150px] rounded-full" />
+      </div>
+
+      <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="grid md:grid-cols-[1fr_1.5fr] gap-16 items-start transform-gpu will-change-transform"
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="
+            grid
+            lg:grid-cols-[1fr_520px_1fr]
+            gap-16
+            items-center
+          "
         >
-          {/* Left Side: Photo */}
-          <div className="relative w-full max-w-sm mx-auto md:mx-0">
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-cream-alt border border-border-soft">
-              <img 
-                src="/images/about.jpg" 
-                alt="Working" 
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover"
-              />
+          {/* ================= LEFT CONTENT ================= */}
+
+          <div className="max-w-xl">
+            {/* Small Heading */}
+            <div className="flex items-center gap-3 mb-6">
+              <span className="w-10 h-[2px] bg-red-500" />
+
+              <p
+                className="
+                  uppercase
+                  tracking-[5px]
+                  text-sm
+                  text-red-400
+                  font-semibold
+                "
+              >
+                ABOUT ME
+              </p>
             </div>
-            <div className="absolute -inset-4 border border-accent-gold/20 rounded-3xl -z-10"></div>
+
+            {/* Main Heading */}
+            <h2
+              className="
+                text-5xl
+                md:text-6xl
+                xl:text-7xl
+                font-black
+                leading-[0.95]
+                tracking-[-4px]
+                text-white
+                mb-10
+              "
+            >
+              Passionate
+              <br />
+              About Building
+              <br />
+              Modern
+              <span className="text-red-500">
+                {" "}
+                Web Apps.
+              </span>
+            </h2>
+
+            {/* Description */}
+            <div
+              className="space-y-6 text-lg leading-relaxed  text-white/70"
+            >
+              <p>
+                I am a Full Stack Developer focused on
+                creating scalable, high-performance web
+                applications using modern technologies like
+                React, Node.js, Express, MongoDB, and Next.js.
+              </p>
+
+              <p>
+                My passion lies in building clean user
+                interfaces, optimized backend systems,
+                and seamless digital experiences that
+                solve real-world business problems.
+              </p>
+
+              <p>
+                I continuously improve my skills in
+                system architecture, API development,
+                cloud deployment, and frontend engineering
+                to build production-ready applications.
+              </p>
+            </div>
           </div>
 
-          {/* Right Side: Content */}
-          <div>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-deep mb-8 tracking-tight">
-              About Me.
-            </h2>
-            
-            <div className="text-text-muted text-lg leading-relaxed mb-12 space-y-6">
-              <p>
-                I am a Software Engineer focused on building robust, high-performance web applications using the MERN stack. My engineering approach prioritizes clean architecture, scalability, and solving complex business challenges with pragmatic technical solutions.
-              </p>
-              <p>
-                My expertise spans the entire product lifecycle—from designing resilient RESTful APIs and optimizing database schemas, to developing intuitive, state-driven frontends that deliver seamless user experiences.
-              </p>
-              <p>
-                I am deeply committed to engineering excellence, continuously refining my knowledge of distributed systems, cloud deployments, and modern web architecture to build production-ready applications that drive measurable impact.
-              </p>
-            </div>
+          {/* ================= CENTER IMAGE ================= */}
 
-            {/* Stat Cards */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {stats.map((stat, index) => (
-                <div key={index} className="bg-cream-alt p-6 rounded-xl border border-border-soft flex flex-col items-center text-center">
-                  <span className="text-3xl font-serif font-bold text-accent-gold mb-2">{stat.value}</span>
-                  <span className="text-sm font-medium text-text-muted">{stat.label}</span>
-                </div>
-              ))}
+          <div className="relative flex justify-center">
+            {/* Glow */}
+            <div className="absolute w-[420px] h-[420px] bg-red-500/20 blur-[120px] rounded-full" />
+
+            {/* Image */}
+            <motion.img
+              animate={{
+                y: [0, -12, 0],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              src="/images/about-1.png"
+              alt="Nasimudheen"
+              className="
+                relative
+                z-10
+                h-[720px]
+                w-full
+                object-cover
+                object-center
+                rounded-[40px]
+                shadow-[0_30px_80px_rgba(0,0,0,0.65)]
+              "
+            />
+
+            {/* Bottom Text */}
+            <div
+              className="absolute z-20  bottom-8 left-8 right-8"
+            >
+              <div
+                className="p-6 border  bg-black/40 backdrop-blur-md border-white/10 rounded-3xl"
+              >
+                <p
+                  className="text-xl font-semibold leading-relaxed text-white "
+                >
+                  Creating modern digital experiences
+                  with scalable architecture and
+                  premium UI design.
+                </p>
+              </div>
             </div>
+          </div>
+
+          {/* ================= RIGHT CARDS ================= */}
+
+          <div className="space-y-5">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                whileHover={{
+                  x: 10,
+                }}
+                className="p-8 transition-all duration-300 border  bg-white/5 border-white/10 backdrop-blur-md rounded-3xl hover:border-red-500/40"
+              >
+                <h3
+                  className="mb-3 text-5xl font-black text-red-500 "
+                >
+                  {stat.value}
+                </h3>
+
+                <p
+                  className="text-lg font-medium  text-white/70"
+                >
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>
