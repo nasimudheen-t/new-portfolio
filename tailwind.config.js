@@ -7,12 +7,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        'cream-bg': '#000000',
-        'cream-alt': '#0a0a0a',
-        'border-soft': '#333333',
-        'text-deep': '#ffffff',
-        'text-muted': '#a3a3a3',
-        'accent-gold': '#ef4444',
+        'brand-bg': '#050505',
+        'brand-secondary': '#0D1117',
+        'brand-surface': '#111827',
+        'brand-accent': '#3B82F6',
+        'brand-muted': '#94A3B8',
+        'brand-text': '#FFFFFF',
+        'brand-text-secondary': '#CBD5E1',
+      },
+      fontFamily: {
+        sora: ['Sora', 'sans-serif'],
+        grotesk: ['Space Grotesk', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       }
     },
   },

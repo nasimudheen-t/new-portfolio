@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Briefcase, Activity, Home, Building, Heart, Utensils, ExternalLink, CheckCircle2, Layout, Server, Smartphone, Zap } from "lucide-react";
+import { Layout, Server, Smartphone, CheckCircle2, Zap, Activity, ExternalLink } from "lucide-react";
 
 const services = [
   {
